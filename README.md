@@ -3,48 +3,22 @@
 
 ## 🐍 GitHub Contribution Snake
 
-name: Generate Snake
+- uses: Platane/snk@v3
+  with:
+    # github user name to read the contribution graph from (**required**)
+    # using action context var `github.repository_owner` or specified user
+    github_user_name: ${{ BalamuruganT006 }}
 
-# Controls when the action will run.
-on:
-  # Triggers the workflow on push or pull request events but only for the main branch
-  schedule:
-    # Run every 6 hours
-    - cron: "0 */6 * * *"
-  workflow_dispatch:
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      
-      - uses: Platane/snk@v3
-        with:
-          # github user name to read the contribution graph from (**required**)
-          # using action context var `github.repository_owner`  or specified user
-          github_user_name: BalamuruganT006
-
-          # list of files to generate.
-          # one file per line. Each output can be customized with options as query string.
-          #
-          #  supported options:
-          #  - palette:     A preset of color, one of [github, github-dark, github-light]
-          #  - color_snake: Color of the snake
-          #  - color_dots:  Coma separated list of dots color.
-          #                 The first one is 0 contribution, then it goes from the low contribution to the highest.
-          #                 Exactly 5 colors are expected.
-          outputs: |
-            dist/github-snake.svg
-            dist/github-snake-dark.svg?palette=github-dark
-            dist/ocean.gif?color_snake=orange&color_dots=#d4f1d4,#a8e6a3,#7bc67b,#5fa85f,#4a8c4a
-
-      # push the content of <build_dir> to a branch
-      # the content will be available at https://raw.githubusercontent.com/<repo_owner>/<repo_name>/<branch>/<file>
-      - name: push snake assets to output branch
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-          publish_branch: output
-
+    # list of files to generate.
+    # one file per line. Each output can be customized with options as query string.
+    #
+    #  supported options:
+    #  - palette:     A preset of color, one of [github, github-dark, github-light]
+    #  - color_snake: Color of the snake
+    #  - color_dots:  Coma separated list of dots color.
+    #                 The first one is 0 contribution, then it goes from the low contribution to the highest.
+    #                 Exactly 5 colors are expected.
+    outputs: |
+      dist/github-snake.svg
+      dist/github-snake-dark.svg?palette=github-dark
+      dist/ocean.gif?color_snake=orange&color_dots=#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9
