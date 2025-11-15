@@ -1,5 +1,6 @@
 # README
-[![BalamuruganT006 GitHub stats](https://github-readme-stats.vercel.app/api?username=BalamuruganT006 GitHub stats)](https://github.com/anuraghazra/github-readme-stats)
+[![BalamuruganT006 GitHub stats](https://github-readme-stats.vercel.app/api?username=BalamuruganT006)](https://github.com/anuraghazra/github-readme-stats)
+
 - uses: Platane/snk@v3
   with:
     # github user name to read the contribution graph from (**required**)
