@@ -1,9 +1,9 @@
 # README
 [![BalamuruganT006 GitHub stats](https://github-readme-stats.vercel.app/api?username=BalamuruganT006)](https://github.com/anuraghazra/github-readme-stats)
 
-## 🐍 GitHub Contribution Snake
+🐍 GitHub Contribution Snake
 
-![snake gif](https://github.com/BalamuruganT006/BalamuruganT006/blob/output/github-contribution-grid-snake.gif)
+![snake gif](github-user-contribution.svg)
 
 ### 📊 GitHub Stats
 
