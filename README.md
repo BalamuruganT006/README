@@ -3,7 +3,7 @@
 
 ## 🐍 GitHub Contribution Snake
 
-- uses: BalamuruganT006/snk@v3                                  
+- uses: BalamuruganT006                                  
   with:
     # github user name to read the contribution graph from (**required**)
     # using action context var `github.repository_owner` or specified user
